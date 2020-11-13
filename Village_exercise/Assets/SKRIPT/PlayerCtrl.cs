@@ -6,7 +6,8 @@ public class PlayerCtrl : MonoBehaviour
 
 {
 
-    public float speed = 1.5f; //speed for our red car
+    public float turnSpeed = 30f; 
+    public float speed = 2f; //speed for our red car
     public float verticalInput; // Input of arrow keys up and down
     public float horizontalInput; // Input of L and R arrow keys 
 
@@ -21,8 +22,8 @@ public class PlayerCtrl : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-        //move our red car
+        //move our red car 
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
+        transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput,Space.Self);
     }
 }
