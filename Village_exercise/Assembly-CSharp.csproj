@@ -57,7 +57,6 @@
   <ItemGroup>
      <Compile Include="Assets\SKRIPT\PlayerCtrl.cs" />
      <Compile Include="Assets\SKRIPT\CameraBehaviour.cs" />
-     <Compile Include="Assets\SKRIPT\PlayerController.cs" />
      <None Include="Assets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
      <None Include="Assets\PolygonPrototype\Shaders\Prototype_Object.shader" />
      <None Include="Assets\PolygonPrototype\Shaders\Prototype_Global.shader" />
