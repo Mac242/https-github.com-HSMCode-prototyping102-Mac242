@@ -6,8 +6,8 @@ public class PlayerCtrl : MonoBehaviour
 
 {
 
-    public float turnSpeed = 30f; 
-    public float speed = 2f; //speed for our red car
+    public float turnSpeed = 150f; 
+    public float speed = 5f; //speed for our red car
     private float verticalInput; // Input of arrow keys up and down
     private float horizontalInput; // Input of L and R arrow keys 
 
@@ -22,8 +22,16 @@ public class PlayerCtrl : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-        //move our red car 
+        //move our red car forward
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+
+        if(verticalInput > 0)
+        {
+            //if I press the arrow keys, my input float is bigger than 0, then do
+            Debug.Log("Vertical Input bigger than null");
+        }
+
+        //move our red car forward left right
         transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput,Space.Self);
     }
 }
