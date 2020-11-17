@@ -6,6 +6,10 @@ public class PlayerCtrl : MonoBehaviour
 
 {
 
+    public GameObject wheelFL;
+    public GameObject wheelFR;
+    public GameObject wheelBL;
+    public GameObject wheelBR;
     public float turnSpeed = 20f; 
     public float speed = 2f; //speed for our red car
     private float verticalInput; // Input of arrow keys up and down
@@ -32,6 +36,10 @@ public class PlayerCtrl : MonoBehaviour
 
             //if I press the arrow keys, my input float is bigger than 0, then do
             // Debug.Log("Vertical Input bigger than null");
+            wheelFL.transform.Rotate(20,0,0);
+            wheelFR.transform.Rotate(20,0,0);
+            wheelBL.transform.Rotate(20,0,0);
+            wheelBR.transform.Rotate(20,0,0);
         }
                 
     
